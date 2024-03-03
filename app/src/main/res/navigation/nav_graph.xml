@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ListFragment">
+
+    <fragment
+        android:id="@+id/ListFragment"
+        android:name="com.juanlugg8.songslist.ListFragment"
+        android:label="@string/list"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/action_ListFragment_to_CreationFragment"
+            app:destination="@id/CreationFragment" />
+        <action
+            android:id="@+id/action_ListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CreationFragment"
+        android:name="com.juanlugg8.songslist.CreationFragment"
+        android:label="@string/create"
+        tools:layout="@layout/fragment_creation"/>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.juanlugg8.songslist.DetailFragment"
+        android:label="@string/detail"
+        tools:layout="@layout/fragment_detail" />
+</navigation>
